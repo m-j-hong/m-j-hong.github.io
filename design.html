@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Design</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="navbar">
+        <h2><a href="index.html">Home</a></h2>
+    </div>
+    <br><button id="cycleDesigns">COOL BUTTON!!</button><br>
+    <p id="designs">click the cool button to see some cool shirts i made!</p>
+
+    <script>
+        var cycle = 0
+        const gallery =
+        ["images/t shirts/shirt black copy.png",
+          "images/t shirts/shirt red copy.png"
+        ]
+        document.getElementById("cycleDesigns").onclick = function(){
+            document.getElementById("designs").innerHTML = '<img src="' + gallery[cycle] + '" width="500" alt="cool stuff"><br>'
+            cycle++;
+            if (cycle == gallery.length) {
+                cycle = 0;
+            }
+        }
+    </script>
+  </body>
+</html>

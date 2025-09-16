@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Architecture</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="navbar">
+      <h2><a href="index.html">Home</a></h2>
+    </div>
+    <br><button id="cycleArch">architecture button</button><br>
+    <p id="arch">click the button to see my architecture stuff!</p>
+
+    <script>
+      var cycle = 0
+      const gallery = 
+      ["images/baden project/ModelAxon1.jpg", 
+        "images/baden project/ModelAxon2.jpg", 
+        "images/baden project/ModelDetail1.jpg",
+        "images/baden project/ModelDetail2.jpg",
+        "images/baden project/PaperRelief.jpg"]
+      document.getElementById("cycleArch").onclick = function(){
+          document.getElementById("arch").innerHTML = '<img src="' + gallery[cycle] + '" width="500" alt="cool stuff"><br>'
+          cycle++;
+          if (cycle == gallery.length) {
+              cycle = 0;
+          }
+      }
+  </script>
+  </body>
+</html>
