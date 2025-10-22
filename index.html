@@ -1,21 +1,112 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>MJ Hong</title>
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-    <div class="navbar">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MJ Hong</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="top"></div>
+  <div class="nav-bar">
+        <button class="nav-button" onclick="scrollToSection('about')">
+          <h3>About</h3>
+        </button>
+        <button class="nav-button" onclick="scrollToSection('projects')">
+          <h3>Projects</h3>
+        </button>
+        <button class="nav-button" onclick="scrollToSection('contact')">
+          <h3>Contact</h3>
+        </button>
+  </div>
+
+  <section class="cover">
+    <div class="cover-text">
       <h1>MJ Hong</h1>
-      <h2><a href="architecture.html">Architecture</a> / <a href="design.html">Design</a></h2>
     </div>
-    <img src="images/home/headshot-cool.png" width="300">
-    <h2>Junior at <a href="https://washu.edu" target="_blank">WashU</a></h2>
-    <p>i literally just made this website</p>  
-    <script src = "js/script.js"></script>
-    <h2>Academic Interests</h2>
-    <p>Design<br>Philosophy<br>Architecture<br>Quantum Physics<br>Mathematics<br>Psychology</p>
-  
-  </body>
+  </section>
+
+
+  <section id="about">
+    <div class="section-header">
+      <h2 class="section-header-text">About</h2>
+    </div>
+    <div class="section-content">
+      <div class="section-text">
+        design isn’t made. it’s discovered. it isn’t created. it’s remembered
+        <br>
+        i think design is one of those beautiful things that directly reminds us of the 
+        truth of it all. it’s impossible to fully describe because it’s one step in our
+        world of “separate” forms and one step in the boundless, indivisible love of the cosmos.
+        <br>
+        <br>
+        good design is something that you know exactly what to do with before you even 
+        see it; everything about its construction is already identical to the purpose 
+        that it serves. it’s beautiful to look at, but not because it makes you think. 
+        it allows you to stop thinking, to enter into doing directly from being. interacting 
+        with it is a dance, where you respond to it and it responds to you seamlessly. there 
+        is no delay, no lag of thought-computing between intent and action. design is 
+        empathetic, it listens to you. the best design is something that you feel like already 
+        completely understands you as a user. the most effective design comes from the closest,
+        most sensitive and receptive listening.
+        <br>
+        <br>
+        our job as designers is to get out of the way. we must become porous enough that 
+        solutions arise through us. we are not creators, but conduits; we are thresholds through 
+        which what already exists can come into form
+        <br>
+        <br>
+        nature is the most perfect designer; natural selection IS design. not forcing something 
+        into a space, but rather allowing the shaping and molding of form by the patterns, needs, 
+        behaviors of the immediate environment.
+        <br>
+        <br>
+        in order to allow good design to happen, you have to put yourself in a profoundly empathetic
+        position. design is not something you think about. it shows up in how you feel, but deeper 
+        than that, it is dictated by the patterns by which you live. design is not a thing, not an 
+        object, but rather a doorway. a threshold between the manifested and the manifesting. bad 
+        design is full of friction, resistance. it is insulation between what is physically 
+        perceivable and what is coming into being. good design is smooth, fluid, elegant in all
+        patterns of actions it responds to.
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section" id="projects">
+    <div class="section-header">
+      <h2 class="section-header-text">Projects</h2>
+    </div>
+    <div class="section-content">
+
+      <div class="project-grid">
+        <div class="project-item"></div>
+        <div class="project-item"></div>
+        <div class="project-item"></div>
+        <div class="project-item"></div>
+        <div class="project-item"></div>
+        <div class="project-item"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="section-header">
+      <h2 class="section-header-text">Contact</h2>
+    </div>
+    <div class="section-content">
+      <div class="section-text">
+        email: hong.m.j@wustl.edu
+      </div>
+  </section>
+
+  <section class="footer">
+    <button class="footer-button" onclick="scrollToSection('top')">
+      <h3>Back To Top</h3>
+    </button>
+    <div class="footer-text">
+      Made from scratch by @m-j-hong with JavaScript, HTML, and CSS
+    </div>
+  </section>
+  <script src="js/script.js"></script>
+</body>
 </html>

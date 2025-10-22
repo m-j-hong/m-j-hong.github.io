@@ -1,31 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=IBM+Plex+Mono:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
 body {
-  display: block;
-  align-items: center;
-  padding: auto;
-  font-family: 'Courier New', Courier, monospace;
-  background: #f9f9f9;
-  text-align: center;
   margin: 0px;
-}
-.navbar {
-  position: sticky;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  top: 0;
-  z-index: 1000;
-  width: 100%;
-  height: auto;
-  background-color: #333;
-  color: #f9f9f9;
+  background-color: #F8F7F4;
+  font-family: 'DM Mono', monospace;
 }
 
-button {
-  font-family: inherit;
-  border: 0;
-  padding: 10px;
+h1 {
+  font-family: 'IBM Plex Mono', monospace;
+  user-select: none;
 }
-a {
-  color: inherit;
+
+h2, h3, button {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 100;
+  user-select: none;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+
+
+
+.nav-bar {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  background-color: #3B4B62;
+  border-bottom: 4px solid #242422;
+  width: 100vw;
+  height: 60px;
+  gap: 20px;
+}
+
+.nav-button {
+  transform: translateY(50%); /* moves button down halfway */
+
+  width: 180px;
+  height: 60px;
+  border-radius: 4px;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #A0B3D3;
+  border: 4px solid #242422;
+
+  color: #242422;
+}
+
+.nav-button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.cover {
+  display: flex;
+
+  height: 90vh;
+  width: 100%;
+
+  background: url("../images/home/architecture.JPG"); 
+  background-size: cover; 
+  background-position: center; 
+  background-attachment: fixed;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #F8F7F4;
+  font-size: 128px;
+}
+
+
+.section {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.section-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 100vw;
+  height: 20px;
+
+  background: #E6E3D4;
+  border-top: 4px solid #242422;
+  border-bottom: 4px solid #242422;
+}
+
+.section-header-text {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 200px;
+  height: 80px;
+  border-radius: 4px;
+
+  background: #E6E3D4;
+  border: 4px solid #242422;
+}
+
+
+.section-content {
+  text-align: center;
+  width: 100%;
+}
+
+.section-text {
+  margin: 100px 200px;
+}
+
+.project-grid {
+  display: grid;
+  margin: 100px 200px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.project-item {
+  display: grid;
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  background: #A0B3D3;
+}
+
+.project-item:hover {
+  background: #3B4B62;
+}
+
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: #3B4B62;
+  border-top: 4px solid #242422;
+  width: 100vw;
+  height: 240px;
+}
+
+.footer-button {
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+
+  width: 180px;
+  height: 60px;
+  border-radius: 4px;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #A0B3D3;
+  border: 4px solid #242422;
+
+  color: #242422;
+}
+
+.footer-button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.footer-text {
+  color: #F8F7F4;
 }
