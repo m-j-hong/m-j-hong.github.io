@@ -1,73 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <title>MJ Hong</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div id="top"></div>
   <div class="nav-bar">
-        <button class="nav-button" onclick="scrollToSection('about')">
-          <h3>About</h3>
-        </button>
-        <button class="nav-button" onclick="scrollToSection('projects')">
-          <h3>Projects</h3>
-        </button>
-        <button class="nav-button" onclick="scrollToSection('contact')">
-          <h3>Contact</h3>
-        </button>
+    <a class="nav-button" href="#projects">
+      <h3>Projects</h3>
+    </a>
+    <a class="nav-button" href="#about">
+      <h3>About</h3>
+    </a>
+    <a class="nav-button" href="#contact">
+      <h3>Contact</h3>
+    </a>
   </div>
+  <div id="top-button-div"></div>
 
   <section class="cover">
-    <div class="cover-text">
-      <h1>MJ Hong</h1>
-    </div>
-  </section>
-
-
-  <section id="about">
-    <div class="section-header">
-      <h2 class="section-header-text">About</h2>
-    </div>
-    <div class="section-content">
-      <div class="section-text">
-        design isn’t made. it’s discovered. it isn’t created. it’s remembered
-        <br>
-        i think design is one of those beautiful things that directly reminds us of the 
-        truth of it all. it’s impossible to fully describe because it’s one step in our
-        world of “separate” forms and one step in the boundless, indivisible love of the cosmos.
-        <br>
-        <br>
-        good design is something that you know exactly what to do with before you even 
-        see it; everything about its construction is already identical to the purpose 
-        that it serves. it’s beautiful to look at, but not because it makes you think. 
-        it allows you to stop thinking, to enter into doing directly from being. interacting 
-        with it is a dance, where you respond to it and it responds to you seamlessly. there 
-        is no delay, no lag of thought-computing between intent and action. design is 
-        empathetic, it listens to you. the best design is something that you feel like already 
-        completely understands you as a user. the most effective design comes from the closest,
-        most sensitive and receptive listening.
-        <br>
-        <br>
-        our job as designers is to get out of the way. we must become porous enough that 
-        solutions arise through us. we are not creators, but conduits; we are thresholds through 
-        which what already exists can come into form
-        <br>
-        <br>
-        nature is the most perfect designer; natural selection IS design. not forcing something 
-        into a space, but rather allowing the shaping and molding of form by the patterns, needs, 
-        behaviors of the immediate environment.
-        <br>
-        <br>
-        in order to allow good design to happen, you have to put yourself in a profoundly empathetic
-        position. design is not something you think about. it shows up in how you feel, but deeper 
-        than that, it is dictated by the patterns by which you live. design is not a thing, not an 
-        object, but rather a doorway. a threshold between the manifested and the manifesting. bad 
-        design is full of friction, resistance. it is insulation between what is physically 
-        perceivable and what is coming into being. good design is smooth, fluid, elegant in all
-        patterns of actions it responds to.
-      </div>
+    <div id="cover-text">
+      <h1>MJ_Hong</h1>
     </div>
   </section>
 
@@ -79,15 +34,37 @@
     <div class="section-content">
 
       <div class="project-grid">
-        <div class="project-item"></div>
-        <div class="project-item"></div>
-        <div class="project-item"></div>
-        <div class="project-item"></div>
-        <div class="project-item"></div>
-        <div class="project-item"></div>
+        <a class="project-item" href="baden-project.html">Public Park Concept<br>Baden, St. Louis</a>
+        <a class="project-item" href="shirts.html">Club T-Shirts<br>WashU Climbing</a>
+        <a class="project-item" href="constellation-project.html">Constellation Site Mockup<br>Figma</a>
       </div>
     </div>
   </section>
+
+
+  <section id="about">
+    <div class="section-header">
+      <h2 class="section-header-text">About</h2>
+    </div>
+    <div class="section-content">
+      <div class="section-text">
+        I’m MJ Hong, a computer science student at Washington University 
+        in St. Louis, with minors in architecture and human-computer interaction. 
+        I work in the space where logic and aesthetics meet, designing digital 
+        experiences that feel intuitive, deliberate, and alive.
+        <br><br>
+        My background crosses disciplines: code, form, structure, psychology, 
+        motion. To me, beauty and functionality aren’t opposites; they’re the 
+        same language spoken through different mediums. I’m fascinated by how 
+        design can translate between them, making technology feel more human 
+        and humans feel more capable.
+      </div>
+      <div class="section-link">
+        link to my github
+      </div>
+    </div>
+  </section>
+
 
   <section id="contact">
     <div class="section-header">
@@ -95,16 +72,20 @@
     </div>
     <div class="section-content">
       <div class="section-text">
-        email: hong.m.j@wustl.edu
+        <a class="contact-link" href="mailto:mjh.create@gmail.com">Email</a>
+        <a class="contact-link" href="https://linkedin.com/in/mjh-ng" target="_blank">LinkedIn</a>
+        <a class="contact-link" href="https://github.com/m-j-hong" target="_blank">Github</a>
       </div>
   </section>
 
   <section class="footer">
-    <button class="footer-button" onclick="scrollToSection('top')">
+    <a class="footer-button" href="#top">
       <h3>Back To Top</h3>
-    </button>
+    </a>
     <div class="footer-text">
-      Made from scratch by @m-j-hong with JavaScript, HTML, and CSS
+      Built from scratch by 
+      <a href="https://github.com/m-j-hong" target="_blank">@m-j-hong</a>
+      with JavaScript, HTML, and CSS
     </div>
   </section>
   <script src="js/script.js"></script>

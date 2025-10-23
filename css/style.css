@@ -1,11 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=IBM+Plex+Mono:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --neutral-light: #F8F7F4;
+  --neutral-dark: #242422;
+  --accent-light: #B0BED4;
+  --accent-dark: #2B3038;
+  --mid-tone: #E6E3D4;
+}
 
 body {
   margin: 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #F8F7F4;
+  background-color: var(--neutral-light);
   font-family: 'DM Mono', monospace;
 }
 
@@ -14,7 +28,7 @@ h1 {
   user-select: none;
 }
 
-h2, h3, button {
+h2, h3 {
   font-family: 'JetBrains Mono', monospace;
   font-weight: 100;
   user-select: none;
@@ -24,38 +38,67 @@ h2 {
   font-size: 32px;
 }
 
-
-
+a {
+  color: var(--mid-tone);;
+  text-decoration: none;
+}
 
 .nav-bar {
   display: flex;
   position: fixed;
   justify-content: center;
-  background-color: #3B4B62;
-  border-bottom: 4px solid #242422;
+  background-color: var(--accent-dark);
+  border-bottom: 4px solid var(--neutral-dark);
   width: 100vw;
   height: 60px;
-  gap: 20px;
+  gap: 40px;
+}
+
+#top-button-div {
+  display: flex;
+
+  width: 100vw;
+
+  justify-content: left;
+  align-items: top;
+}
+
+#top-button {
+  position: fixed;
+  margin: 8px;
+  
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  
+  background: var(--neutral-light);
+  border: 4px solid var(--neutral-dark);
+
+  text-align: center;
+  font-size: 24px;
+  color: var(--neutral-dark);
 }
 
 .nav-button {
-  transform: translateY(50%); /* moves button down halfway */
+  display: flex;
+  transform: translateY(45%); /* moves button down halfway */
 
-  width: 180px;
+  width: 240px;
   height: 60px;
   border-radius: 4px;
 
+  text-align: center;
   align-items: center;
   justify-content: center;
 
-  background: #A0B3D3;
-  border: 4px solid #242422;
+  background: var(--accent-light);
+  border: 4px solid var(--neutral-dark);
 
-  color: #242422;
+  color: var(--neutral-dark);
+  font-size: 18px;
 }
 
 .nav-button:hover {
-  text-decoration: underline;
   cursor: pointer;
 }
 
@@ -65,7 +108,7 @@ h2 {
   height: 90vh;
   width: 100%;
 
-  background: url("../images/home/architecture.JPG"); 
+  background: url("/images/home/architecture.JPG"); 
   background-size: cover; 
   background-position: center; 
   background-attachment: fixed;
@@ -73,8 +116,17 @@ h2 {
   align-items: center;
   justify-content: center;
 
-  color: #F8F7F4;
-  font-size: 128px;
+  color: var(--neutral-light);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 20vw;
+}
+
+.cover span {
+  display: inline-block;
+}
+
+#projects, #about, #contact {
+  scroll-margin-top: 150px;
 }
 
 
@@ -95,9 +147,9 @@ h2 {
   width: 100vw;
   height: 20px;
 
-  background: #E6E3D4;
-  border-top: 4px solid #242422;
-  border-bottom: 4px solid #242422;
+  background: var(--mid-tone);
+  border-top: 4px solid var(--neutral-dark);
+  border-bottom: 4px solid var(--neutral-dark);
 }
 
 .section-header-text {
@@ -110,19 +162,27 @@ h2 {
   height: 80px;
   border-radius: 4px;
 
-  background: #E6E3D4;
-  border: 4px solid #242422;
+  background: var(--mid-tone);
+  border: 4px solid var(--neutral-dark);
 }
 
 
 .section-content {
+  align-items: center;
+  justify-content: center;
   text-align: center;
   width: 100%;
 }
 
 .section-text {
-  margin: 100px 200px;
+  display: flex;
+  flex-direction: column;
+  margin: 100px 160px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
+
 
 .project-grid {
   display: grid;
@@ -135,11 +195,35 @@ h2 {
   display: grid;
   aspect-ratio: 1 / 1;
   border-radius: 12px;
-  background: #A0B3D3;
+  background: var(--accent-light);
+  align-items: center;
+  justify-content: center;
+  color: transparent;
 }
 
 .project-item:hover {
-  background: #3B4B62;
+  background: var(--accent-dark);
+  color: var(--neutral-light);
+}
+
+.contact-link {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  padding: 0px 40px;
+
+  width: auto;
+  height: 60px;
+  border-radius: 12px;
+  font-size: 20px;
+
+  background: var(--neutral-dark);
+}
+
+.contact-link:hover {
+  text-decoration: underline;
 }
 
 
@@ -149,35 +233,37 @@ h2 {
   position: relative;
   align-items: center;
   justify-content: center;
-  background-color: #3B4B62;
-  border-top: 4px solid #242422;
+  background-color: var(--accent-dark);
+  border-top: 4px solid var(--neutral-dark);
   width: 100vw;
   height: 240px;
 }
 
 .footer-button {
+  display: flex;
   position: absolute;
   top: 0;
   transform: translateY(-50%);
 
-  width: 180px;
+  width: 240px;
   height: 60px;
   border-radius: 4px;
 
+  text-align: center;
   align-items: center;
   justify-content: center;
 
-  background: #A0B3D3;
-  border: 4px solid #242422;
+  background: var(--accent-light);
+  border: 4px solid var(--neutral-dark);
 
-  color: #242422;
+  color: var(--neutral-dark);
+  font-size: 18px;
 }
 
 .footer-button:hover {
-  text-decoration: underline;
   cursor: pointer;
 }
 
 .footer-text {
-  color: #F8F7F4;
+  color: var(--neutral-light);
 }
