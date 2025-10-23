@@ -11,4 +11,280 @@ html {
   --neutral-dark: #242422;
   --neutral-dark-hover: #343430;
   --accent-light: #B0BED4;
-  --
+  --accent-dark: #2B3038;
+  --mid-tone: #E6E3D4;
+}
+
+body {
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--neutral-light);
+  font-family: 'DM Mono', monospace;
+}
+
+h1 {
+  font-family: 'IBM Plex Mono', monospace;
+  user-select: none;
+}
+
+h2, h3 {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 100;
+  user-select: none;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+a {
+  color: var(--mid-tone);
+  text-decoration: none;
+  user-select: none;
+}
+
+.nav-bar {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  background-color: var(--accent-dark);
+  border-bottom: 4px solid var(--neutral-dark);
+  width: 100vw;
+  height: 60px;
+  gap: 40px;
+}
+
+#top-button-div {
+  display: flex;
+
+  width: 100vw;
+
+  justify-content: left;
+  align-items: top;
+}
+
+#top-button {
+  position: fixed;
+  margin: 8px;
+  z-index: 2;
+  
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  
+  background: var(--neutral-light);
+  border: 4px solid var(--neutral-dark);
+
+  text-align: center;
+  font-size: 24px;
+  color: var(--neutral-dark);
+}
+
+.nav-button {
+  display: flex;
+  transform: translateY(45%); /* moves button down halfway */
+
+  width: 240px;
+  height: 60px;
+  border-radius: 4px;
+
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--accent-light);
+  border: 4px solid var(--neutral-dark);
+
+  color: var(--neutral-dark);
+  font-size: 18px;
+}
+
+.nav-button:hover {
+  cursor: pointer;
+}
+
+.cover {
+  display: flex;
+
+  height: 90vh;
+  width: 100vw;
+
+  background: url("/images/home/architecture.JPG"); 
+  background-size: cover; 
+  background-position: center; 
+  background-attachment: fixed;
+
+  align-items: center;
+  justify-content: center;
+
+  color: var(--neutral-light);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 20vw;
+}
+
+.cover span {
+  display: inline-block;
+}
+
+#projects, #about, #contact {
+  scroll-margin-top: 150px;
+}
+
+
+.section {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.section-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 100vw;
+  height: 20px;
+
+  background: var(--mid-tone);
+  border-top: 4px solid var(--neutral-dark);
+  border-bottom: 4px solid var(--neutral-dark);
+}
+
+.section-header-text {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 200px;
+  height: 80px;
+  border-radius: 4px;
+
+  background: var(--mid-tone);
+  border: 4px solid var(--neutral-dark);
+}
+
+
+.section-content {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.section-text {
+  display: flex;
+  flex-direction: column;
+  margin: 100px 160px;
+
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  font-size: 20px;
+  line-height: 1.8em;
+}
+
+
+.project-grid {
+  display: grid;
+  margin: 100px 200px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.project-item {
+  display: flex;
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  background-image: var(--bg-img);
+  background-size: cover;
+  background-position: center;
+  background-color: var(--mid-tone);
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  color: transparent;
+  border: 8px solid var(--mid-tone);
+}
+
+.project-item:hover {
+  background-color: #24242299;
+  background-blend-mode: overlay;
+  border: 4px solid var(--neutral-dark);
+  font-size: 18px;
+  color: var(--neutral-light);
+}
+
+.contact-link {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  padding: 0px 40px;
+
+  width: auto;
+  height: 60px;
+  border-radius: 12px;
+  font-size: 18px;
+
+  color: var(--neutral-light);
+  background: var(--neutral-dark);
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+  background: var(--neutral-dark-hover);
+}
+
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--accent-dark);
+  border-top: 4px solid var(--neutral-dark);
+  width: 100vw;
+  height: 240px;
+}
+
+.footer-button {
+  display: flex;
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+
+  width: 240px;
+  height: 60px;
+  border-radius: 4px;
+
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--accent-light);
+  border: 4px solid var(--neutral-dark);
+
+  color: var(--neutral-dark);
+  font-size: 18px;
+}
+
+.footer-button:hover {
+  cursor: pointer;
+}
+
+.footer-text {
+  color: var(--neutral-light);
+}
+
+.footer-text a:hover {
+  text-decoration: underline;
+}
